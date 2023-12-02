@@ -1,0 +1,1206 @@
+[
+    {
+        "id": "6722e1944d37ce4f",
+        "type": "tab",
+        "label": "Meshtastic Flow",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "4b26ada749530659",
+        "type": "switch",
+        "z": "6722e1944d37ce4f",
+        "name": "Split by PortNum",
+        "property": "payload.packet.payloadVariant.decoded.portnum",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "0",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "2",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "3",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "4",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "5",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "6",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "7",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "8",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "9",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "10",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "32",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "33",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "64",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "65",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "66",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "67",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "68",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "69",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "70",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "71",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "256",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "257",
+                "vt": "num"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 24,
+        "x": 1730,
+        "y": 820,
+        "wires": [
+            [
+                "0c82ac06104f2dab"
+            ],
+            [
+                "7992f3f41f76dbb3"
+            ],
+            [
+                "b433af1af215598a"
+            ],
+            [
+                "3f90eb7f46f8a05c",
+                "f17f2dae7e726aeb"
+            ],
+            [
+                "3d656ec3388a6f9f"
+            ],
+            [
+                "3bf680748c692b7a"
+            ],
+            [
+                "764fb89026975844"
+            ],
+            [
+                "3b2b429d35b8e39a"
+            ],
+            [
+                "480598e179b03b7f"
+            ],
+            [
+                "b88f315c6f82e19c"
+            ],
+            [
+                "cc96cbceaca32537"
+            ],
+            [
+                "b801782800064b29"
+            ],
+            [
+                "4ed035d129b70fea"
+            ],
+            [
+                "e9fc9c8728b2b7a5"
+            ],
+            [
+                "7ee422770a8f9036"
+            ],
+            [
+                "564398999e97844f"
+            ],
+            [
+                "e3d4f0bc8c087c9d"
+            ],
+            [
+                "b4feabd09448ede6"
+            ],
+            [
+                "e43a99fa7c88f74c"
+            ],
+            [
+                "b93b64f677eb4886"
+            ],
+            [
+                "c65c3827960add3a"
+            ],
+            [
+                "61d3fd7bac761503"
+            ],
+            [
+                "15d3aaa123f5b504"
+            ],
+            [
+                "468b7bf04a965c5a"
+            ]
+        ],
+        "outputLabels": [
+            "Unknown",
+            "Text Message",
+            "Remote Hardware",
+            "Position",
+            "Node Info",
+            "Routing",
+            "Admin",
+            "Compressed (Canned) Text Message",
+            "Waypoint",
+            "Audio",
+            "Detection Sensor",
+            "Reply",
+            "IP Tunnel",
+            "Serial",
+            "Store-Forward",
+            "Range Test",
+            "Telemetry",
+            "Zero-GPS Positioning System",
+            "Simulator",
+            "Trace Route",
+            "Neighbor Info",
+            "Private",
+            "ATAK Forwarder",
+            "Unmatched Port Number"
+        ],
+        "icon": "font-awesome/fa-inbox"
+    },
+    {
+        "id": "1f88097d26cd0ccd",
+        "type": "debug",
+        "z": "6722e1944d37ce4f",
+        "name": "Device Measurement",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2820,
+        "y": 920,
+        "wires": []
+    },
+    {
+        "id": "7992f3f41f76dbb3",
+        "type": "debug",
+        "z": "6722e1944d37ce4f",
+        "name": "Text",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2090,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "fd3a18b406ee5d58",
+        "type": "debug",
+        "z": "6722e1944d37ce4f",
+        "name": "Neighbor Info",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2320,
+        "y": 1220,
+        "wires": []
+    },
+    {
+        "id": "0c82ac06104f2dab",
+        "type": "debug",
+        "z": "6722e1944d37ce4f",
+        "name": "Unknown App",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2120,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "2947d9f4e9d977bf",
+        "type": "debug",
+        "z": "6722e1944d37ce4f",
+        "name": "NodeInfo",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2420,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "e3e5d336f5a65149",
+        "type": "template",
+        "z": "6722e1944d37ce4f",
+        "name": "Generate Device Measurement",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "[{\n    \"air_util_tx\": {{payload.packet.payloadVariant.decoded.payload.variant.deviceMetrics.airUtilTx}},\n    \"battery_level\": {{payload.packet.payloadVariant.decoded.payload.variant.deviceMetrics.batteryLevel}},\n    \"channel_utilization\": {{payload.packet.payloadVariant.decoded.payload.variant.deviceMetrics.channelUtilization}},\n    \"voltage\": {{payload.packet.payloadVariant.decoded.payload.variant.deviceMetrics.voltage}}\n},\n{\n    \"from\": \"{{payload.packet.fromHex}}\",\n    \"fromShortName\": \"{{payload.packet.fromShortName}}\",\n    \"fromLongName\": \"{{payload.packet.fromLongName}}\",\n    \"fromHardware\": \"{{payload.packet.fromHardware}}\",\n    \"to\": \"{{payload.packet.toHex}}\",\n    \"toShortName\": \"{{payload.packet.toShortName}}\",\n    \"toLongName\": \"{{payload.packet.toLongName}}\",\n    \"toHardware\": \"{{payload.packet.toHardware}}\",\n    \"channelId\": \"{{payload.channelId}}\",\n    \"gatewayId\": \"{{payload.gatewayId}}\"\n}]",
+        "output": "json",
+        "x": 2490,
+        "y": 960,
+        "wires": [
+            [
+                "1f88097d26cd0ccd",
+                "89a4bf9c6a0c29d1"
+            ]
+        ],
+        "icon": "font-awesome/fa-power-off"
+    },
+    {
+        "id": "e3d4f0bc8c087c9d",
+        "type": "switch",
+        "z": "6722e1944d37ce4f",
+        "name": "Telemetry Type",
+        "property": "payload.packet.payloadVariant.decoded.payload.variant.oneofKind",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "deviceMetrics",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "environmentMetrics",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 3,
+        "x": 2120,
+        "y": 1040,
+        "wires": [
+            [
+                "e3e5d336f5a65149"
+            ],
+            [
+                "60d301706f6862ca"
+            ],
+            [
+                "a02058ba2589c4f0"
+            ]
+        ],
+        "outputLabels": [
+            "Device",
+            "Environment",
+            "Unknown"
+        ],
+        "icon": "node-red/status.svg"
+    },
+    {
+        "id": "a02058ba2589c4f0",
+        "type": "debug",
+        "z": "6722e1944d37ce4f",
+        "name": "Unknown Telemetry",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2450,
+        "y": 1100,
+        "wires": []
+    },
+    {
+        "id": "8afdd822e990bc72",
+        "type": "catch",
+        "z": "6722e1944d37ce4f",
+        "name": "",
+        "scope": null,
+        "uncaught": false,
+        "x": 240,
+        "y": 80,
+        "wires": [
+            [
+                "8e464f7bcfb69475"
+            ]
+        ]
+    },
+    {
+        "id": "8e464f7bcfb69475",
+        "type": "debug",
+        "z": "6722e1944d37ce4f",
+        "name": "errors",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 390,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "168186adf8829f58",
+        "type": "function",
+        "z": "6722e1944d37ce4f",
+        "name": "Translate Node Identifiers to Hex",
+        "func": "msg.payload.packet.toHex = '!' + msg.payload.packet.to.toString(16)\nmsg.payload.packet.fromHex = '!' + msg.payload.packet.from.toString(16)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 980,
+        "y": 820,
+        "wires": [
+            [
+                "7376f04fa5167a41",
+                "0119273cd3dc318c"
+            ]
+        ]
+    },
+    {
+        "id": "3f90eb7f46f8a05c",
+        "type": "function",
+        "z": "6722e1944d37ce4f",
+        "name": "Generate Position Measurement",
+        "func": "var payload = msg.payload.packet.payloadVariant.decoded.payload\n\nvar out = [{\n    \"latitude\": (payload.latitudeI * 1e-7),\n    \"longitude\": (payload.longitudeI * 1e-7),\n    \"altitude\": payload.altitude,\n    \"satsInView\": payload.satsInView,\n    \"groundSpeed\": payload.groundSpeed,\n    \"groundTrack\": payload.groundTrack,\n    \"pDOP\": payload.pDOP,\n},\n{\n    \"from\": msg.payload.packet.fromHex,\n    \"fromShortName\": msg.payload.packet.fromShortName,\n    \"fromLongName\": msg.payload.packet.fromLongName,\n    \"fromHardware\": msg.payload.packet.fromHardware,\n    \"to\": msg.payload.packet.toHex,\n    \"toShortName\": msg.payload.packet.toShortName,\n    \"toLongName\": msg.payload.packet.toLongName,\n    \"toHardware\": msg.payload.packet.toHardware,\n    \"channelId\": msg.payload.channelId,\n    \"gatewayId\": msg.payload.gatewayId\n}]\n\nmsg.payload = out\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2170,
+        "y": 500,
+        "wires": [
+            [
+                "187c09964e50fa8d",
+                "79bbcc0e6ed969ef"
+            ]
+        ],
+        "icon": "font-awesome/fa-location-arrow"
+    },
+    {
+        "id": "b93b64f677eb4886",
+        "type": "debug",
+        "z": "6722e1944d37ce4f",
+        "name": "Trace Route",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2110,
+        "y": 1180,
+        "wires": []
+    },
+    {
+        "id": "60d301706f6862ca",
+        "type": "template",
+        "z": "6722e1944d37ce4f",
+        "name": "Generate Environment Measurement",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "[{\n    \"barometric_pressure\": {{payload.packet.payloadVariant.decoded.payload.variant.environmentMetrics.barometricPressure}},\n    \"gas_resistance\": {{payload.packet.payloadVariant.decoded.payload.variant.environmentMetrics.gasResistance}},\n    \"relative_humidity\": {{payload.packet.payloadVariant.decoded.payload.variant.environmentMetrics.relativeHumidity}},\n    \"temperature\": {{payload.packet.payloadVariant.decoded.payload.variant.environmentMetrics.temperature}}\n},\n{\n    \"from\": \"{{payload.packet.fromHex}}\",\n    \"fromShortName\": \"{{payload.packet.fromShortName}}\",\n    \"fromLongName\": \"{{payload.packet.fromLongName}}\",\n    \"fromHardware\": \"{{payload.packet.fromHardware}}\",\n    \"to\": \"{{payload.packet.toHex}}\",\n    \"toShortName\": \"{{payload.packet.toShortName}}\",\n    \"toLongName\": \"{{payload.packet.toLongName}}\",\n    \"toHardware\": \"{{payload.packet.toHardware}}\",\n    \"channelId\": \"{{payload.channelId}}\",\n    \"gatewayId\": \"{{payload.gatewayId}}\"\n}]",
+        "output": "json",
+        "x": 2510,
+        "y": 1040,
+        "wires": [
+            [
+                "2bdc3964fe5ddcd9",
+                "aedfefc4bffe7a52"
+            ]
+        ],
+        "icon": "font-awesome/fa-thermometer-2"
+    },
+    {
+        "id": "2bdc3964fe5ddcd9",
+        "type": "debug",
+        "z": "6722e1944d37ce4f",
+        "name": "Environment Measurement",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2840,
+        "y": 1000,
+        "wires": []
+    },
+    {
+        "id": "187c09964e50fa8d",
+        "type": "influxdb out",
+        "z": "6722e1944d37ce4f",
+        "influxdb": "d96c8f45d69c34f7",
+        "name": "Write Position Measurement",
+        "measurement": "Position",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 2480,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "db8e031fc33d22bd",
+        "type": "debug",
+        "z": "6722e1944d37ce4f",
+        "name": "Original Messages",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 930,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "f1d333de35270471",
+        "type": "debug",
+        "z": "6722e1944d37ce4f",
+        "name": "Duplicate Messages",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 940,
+        "y": 860,
+        "wires": []
+    },
+    {
+        "id": "c4035ca079143b5e",
+        "type": "decode",
+        "z": "6722e1944d37ce4f",
+        "x": 440,
+        "y": 820,
+        "wires": [
+            [
+                "7f339285c68ffe8a",
+                "575ad45f6bac6411"
+            ]
+        ]
+    },
+    {
+        "id": "6bd3a9cf5819b4d4",
+        "type": "mqtt in",
+        "z": "6722e1944d37ce4f",
+        "name": "Injest from MQTT",
+        "topic": "msh/+/c/#",
+        "qos": "1",
+        "datatype": "auto-detect",
+        "broker": "07b2da65ae42f546",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 260,
+        "y": 820,
+        "wires": [
+            [
+                "c4035ca079143b5e"
+            ]
+        ]
+    },
+    {
+        "id": "7f339285c68ffe8a",
+        "type": "debug",
+        "z": "6722e1944d37ce4f",
+        "name": "Decoded Message",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 630,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "0119273cd3dc318c",
+        "type": "debug",
+        "z": "6722e1944d37ce4f",
+        "name": "Nodes Identified by Hex",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1270,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "3bf680748c692b7a",
+        "type": "debug",
+        "z": "6722e1944d37ce4f",
+        "name": "Routing",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2100,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "764fb89026975844",
+        "type": "debug",
+        "z": "6722e1944d37ce4f",
+        "name": "Admin",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2090,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "3b2b429d35b8e39a",
+        "type": "debug",
+        "z": "6722e1944d37ce4f",
+        "name": "Canned",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2100,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "480598e179b03b7f",
+        "type": "debug",
+        "z": "6722e1944d37ce4f",
+        "name": "Waypoint",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2100,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "b88f315c6f82e19c",
+        "type": "debug",
+        "z": "6722e1944d37ce4f",
+        "name": "Audio",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2090,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "cc96cbceaca32537",
+        "type": "debug",
+        "z": "6722e1944d37ce4f",
+        "name": "Detection Sensor",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2130,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "b801782800064b29",
+        "type": "debug",
+        "z": "6722e1944d37ce4f",
+        "name": "Reply",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2090,
+        "y": 820,
+        "wires": []
+    },
+    {
+        "id": "4ed035d129b70fea",
+        "type": "debug",
+        "z": "6722e1944d37ce4f",
+        "name": "IP Tunnel",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2100,
+        "y": 860,
+        "wires": []
+    },
+    {
+        "id": "e9fc9c8728b2b7a5",
+        "type": "debug",
+        "z": "6722e1944d37ce4f",
+        "name": "Serial",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2090,
+        "y": 900,
+        "wires": []
+    },
+    {
+        "id": "7ee422770a8f9036",
+        "type": "debug",
+        "z": "6722e1944d37ce4f",
+        "name": "Store-Forward",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2120,
+        "y": 940,
+        "wires": []
+    },
+    {
+        "id": "564398999e97844f",
+        "type": "debug",
+        "z": "6722e1944d37ce4f",
+        "name": "Range Test",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2110,
+        "y": 980,
+        "wires": []
+    },
+    {
+        "id": "b433af1af215598a",
+        "type": "debug",
+        "z": "6722e1944d37ce4f",
+        "name": "Remote Hardware",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2130,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "b4feabd09448ede6",
+        "type": "debug",
+        "z": "6722e1944d37ce4f",
+        "name": "Zero-GPS Positioning",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2140,
+        "y": 1100,
+        "wires": []
+    },
+    {
+        "id": "e43a99fa7c88f74c",
+        "type": "debug",
+        "z": "6722e1944d37ce4f",
+        "name": "Simulator",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2100,
+        "y": 1140,
+        "wires": []
+    },
+    {
+        "id": "61d3fd7bac761503",
+        "type": "debug",
+        "z": "6722e1944d37ce4f",
+        "name": "Private",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2100,
+        "y": 1260,
+        "wires": []
+    },
+    {
+        "id": "15d3aaa123f5b504",
+        "type": "debug",
+        "z": "6722e1944d37ce4f",
+        "name": "ATAK Forwarder",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2120,
+        "y": 1300,
+        "wires": []
+    },
+    {
+        "id": "468b7bf04a965c5a",
+        "type": "debug",
+        "z": "6722e1944d37ce4f",
+        "name": "New Application",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2120,
+        "y": 1340,
+        "wires": []
+    },
+    {
+        "id": "79bbcc0e6ed969ef",
+        "type": "debug",
+        "z": "6722e1944d37ce4f",
+        "name": "Position Measurement",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2460,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "c65c3827960add3a",
+        "type": "function",
+        "z": "6722e1944d37ce4f",
+        "name": "Decode Payload",
+        "func": "msg.payload.packet.payloadVariant.decoded.payload = Buffer.from(msg.payload.packet.payloadVariant.decoded.payload).toJSON()\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2120,
+        "y": 1220,
+        "wires": [
+            [
+                "fd3a18b406ee5d58"
+            ]
+        ]
+    },
+    {
+        "id": "aedfefc4bffe7a52",
+        "type": "influxdb out",
+        "z": "6722e1944d37ce4f",
+        "influxdb": "d96c8f45d69c34f7",
+        "name": "Write Environment Measurement",
+        "measurement": "Environment",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 2860,
+        "y": 1040,
+        "wires": []
+    },
+    {
+        "id": "89a4bf9c6a0c29d1",
+        "type": "influxdb out",
+        "z": "6722e1944d37ce4f",
+        "influxdb": "d96c8f45d69c34f7",
+        "name": "Write Device Measurement",
+        "measurement": "Device",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 2840,
+        "y": 960,
+        "wires": []
+    },
+    {
+        "id": "156e181138777687",
+        "type": "template",
+        "z": "6722e1944d37ce4f",
+        "name": "Generate Packet Measurement",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "[{\n    \"rxTime\": {{payload.packet.rxTime}},\n    \"rxSnr\": {{payload.packet.rxSnr}},\n    \"hopLimit\": {{payload.packet.hopLimit}},\n    \"priority\": {{payload.packet.priority}},\n    \"rxRssi\": {{payload.packet.rxRssi}},\n    \"delayed\": {{payload.packet.delayed}}\n},\n{\n    \"from\": \"{{payload.packet.fromHex}}\",\n    \"fromShortName\": \"{{payload.packet.fromShortName}}\",\n    \"fromLongName\": \"{{payload.packet.fromLongName}}\",\n    \"fromHardware\": \"{{payload.packet.fromHardware}}\",\n    \"to\": \"{{payload.packet.toHex}}\",\n    \"toShortName\": \"{{payload.packet.toShortName}}\",\n    \"toLongName\": \"{{payload.packet.toLongName}}\",\n    \"toHardware\": \"{{payload.packet.toHardware}}\",\n    \"channelId\": \"{{payload.channelId}}\",\n    \"gatewayId\": \"{{payload.gatewayId}}\"\n}]",
+        "output": "json",
+        "x": 1630,
+        "y": 240,
+        "wires": [
+            [
+                "96ef9bbf6799be0a",
+                "3b74c02a6ced16fc"
+            ]
+        ],
+        "icon": "font-awesome/fa-power-off"
+    },
+    {
+        "id": "96ef9bbf6799be0a",
+        "type": "influxdb out",
+        "z": "6722e1944d37ce4f",
+        "influxdb": "d96c8f45d69c34f7",
+        "name": "Write Packet Measurement",
+        "measurement": "Packet",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 1940,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "3b74c02a6ced16fc",
+        "type": "debug",
+        "z": "6722e1944d37ce4f",
+        "name": "Packet Measurement",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1920,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "3d656ec3388a6f9f",
+        "type": "function",
+        "z": "6722e1944d37ce4f",
+        "name": "Add Node Info to Global Context",
+        "func": "var nodeShortNames = global.get('nodeShortNames')\nvar nodeLongNames = global.get('nodeLongNames')\nvar nodeHardware = global.get('nodeHardware')\n\nif (nodeShortNames === undefined) nodeShortNames = {}\nif (nodeLongNames === undefined) nodeLongNames = {}\nif (nodeHardware === undefined) nodeHardware = {}\n\nvar payload = msg.payload.packet.payloadVariant.decoded.payload\n\nif (!(nodeShortNames.hasOwnProperty(payload.id)) || !(nodeShortNames[payload.id] === payload.shortName)){\n    nodeShortNames[payload.id] = payload.shortName\n}\n\nif (!(nodeLongNames.hasOwnProperty(payload.id)) || !(nodeLongNames[payload.id] === payload.longName)) {\n    nodeLongNames[payload.id] = payload.longName\n}\n\nif (!(nodeHardware.hasOwnProperty(payload.id)) || !(nodeHardware[payload.id] === payload.hwModel)) {\n    nodeHardware[payload.id] = payload.hwModel\n}\n\nglobal.set('nodeShortNames', nodeShortNames)\nglobal.set('nodeLongNames', nodeLongNames)\nglobal.set('nodeHardware', nodeHardware)\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2170,
+        "y": 540,
+        "wires": [
+            [
+                "2947d9f4e9d977bf"
+            ]
+        ]
+    },
+    {
+        "id": "7376f04fa5167a41",
+        "type": "function",
+        "z": "6722e1944d37ce4f",
+        "name": "Inject Node Names and Hardware",
+        "func": "var nodeShortNames = global.get('nodeShortNames')\nvar nodeLongNames = global.get('nodeLongNames')\nvar nodeHardware = global.get('nodeHardware')\n\nif (nodeShortNames === undefined) nodeShortNames = {}\nif (nodeLongNames === undefined) nodeLongNames = {}\nif (nodeHardware === undefined) nodeHardware = {}\n\nvar packet = msg.payload.packet\n\nvar unknown = \"unknown\"\n\nvar hardwareMap = {\n    0: \"UNSET\",\n    1: \"TLORA_V2\",\n    2: \"TLORA_V1\",\n    3: \"TLORA_V2_1_1.6\",\n    4: \"TBEAM\",\n    5: \"HELTEC_V2_0\",\n    6: \"TBEAM_V0.7\",\n    7: \"T_ECHO\",\n    8: \"TLORA_V1_1.3\",\n    9: \"RAK4631\",\n    10: \"HELTEC_V2_1\",\n    11: \"HELTEC_V1\",\n    12: \"LILYGO_TBEAM_S3_CORE\",\n    13: \"RAK11200\",\n    14: \"NANO_G1\",\n    15: \"TLORA_V2_1_1.8\",\n    16: \"TLORA_T3_S3\",\n    17: \"NANO_G1_EXPLORER\",\n    18: \"NANO_G2_ULTRA\",\n    19: \"LORA_TYPE\",\n    25: \"STATION_G1\",\n    26: \"RAK11310\",\n    32: \"LORA_RELAY_V1\",\n    33: \"NRF52840DK\",\n    34: \"PPR\",\n    35: \"GENIEBLOCKS\",\n    36: \"NRF52_UNKNOWN\",\n    37: \"PORTDUINO\",\n    38: \"ANDROID_SIM\",\n    39: \"DIY_V1\",\n    40: \"NRF52840_PCA10059\",\n    41: \"DR_DEV\",\n    42: \"M5STACK\",\n    43: \"HELTEC_V3\",\n    44: \"HELTEC_WSL_V3\",\n    45: \"BETAFPV_2400_TX\",\n    46: \"BETAFPV_900_NANO_TX\",\n    47: \"RPI_PICO\",\n    48: \"HELTEC_WIRELESS_TRACKER\",\n    49: \"HELTEC_WIRELESS_PAPER\",\n    50: \"T_DECK\",\n    51: \"T_WATCH_S3\",\n    52: \"PICOMPUTER_S3\",\n    53: \"HELTEC_HT62\",\n    54: \"EBYTE_ESP32_S3\",\n    255: \"PRIVATE_HW\"\n}\n\n// inject From names and hardware info\nif (nodeShortNames.hasOwnProperty(packet.fromHex)){\n    packet.fromShortName = nodeShortNames[packet.fromHex]\n} else {\n    packet.fromShortName = unknown\n}\n\nif (nodeShortNames.hasOwnProperty(packet.fromHex)) {\n    packet.fromShortName = nodeShortNames[packet.fromHex]\n} else {\n    packet.fromShortName = unknown\n}\n\nif (nodeLongNames.hasOwnProperty(packet.fromHex)) {\n    packet.fromLongName = nodeLongNames[packet.fromHex]\n} else {\n    packet.fromLongName = unknown\n}\n\nif (nodeHardware.hasOwnProperty(packet.fromHex)) {\n    packet.fromHardware = hardwareMap[nodeHardware[packet.fromHex]]\n} else {\n    packet.fromHardware = unknown\n}\n\n// handle messages to mesh\nif (packet.toHex === \"!ffffffff\") {\n    packet.toShortName = \"mesh\"\n    packet.toLongName = \"Mesh\"\n    packet.toHardware = \"MESH\"\n    return msg\n}\n\n// inject To names and hardware info\nif (nodeShortNames.hasOwnProperty(packet.toHex)) {\n    packet.toShortName = nodeShortNames[packet.toHex]\n    packet.toLongName = nodeLongNames[packet.toHex]\n    packet.toHardware = hardwareMap[nodeHardware[packet.toHex]]\n} else {\n    packet.toShortName = unknown\n    packet.toLongName = unknown\n    packet.toHardware = unknown\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1300,
+        "y": 820,
+        "wires": [
+            [
+                "4b26ada749530659",
+                "156e181138777687",
+                "b31b44f7ebd5d6ad"
+            ]
+        ]
+    },
+    {
+        "id": "b31b44f7ebd5d6ad",
+        "type": "debug",
+        "z": "6722e1944d37ce4f",
+        "name": "Node Names and Hardware Injected",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1650,
+        "y": 1060,
+        "wires": []
+    },
+    {
+        "id": "575ad45f6bac6411",
+        "type": "function",
+        "z": "6722e1944d37ce4f",
+        "name": "Deduplicate Packets by Id",
+        "func": "const packetIdCacheGloabalKey = 'packetIdCache'\nconst expirySeconds = 300;\nvar idCache = global.get(packetIdCacheGloabalKey)\n\nif (idCache === undefined) {\n    idCache = {}\n}\n\n// clean dead keys\nfor (var key in idCache) {\n    if (idCache[key] <= new Date().getTime()) {\n        delete idCache[key];\n    }\n};\n\nvar id = msg.payload.packet.id\n\nif (idCache[id]) {\n    // message is a duplicate, send to the duplicate output and exit\n    return [null, msg];\n}\n\nidCache[id] = new Date().getTime() + (expirySeconds * 1000)\n\nglobal.set(packetIdCacheGloabalKey, idCache);\n\nreturn [msg, null];",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 650,
+        "y": 820,
+        "wires": [
+            [
+                "168186adf8829f58",
+                "db8e031fc33d22bd"
+            ],
+            [
+                "f1d333de35270471"
+            ]
+        ],
+        "outputLabels": [
+            "Original",
+            "Duplicate"
+        ],
+        "icon": "node-red/split.svg"
+    },
+    {
+        "id": "d96c8f45d69c34f7",
+        "type": "influxdb",
+        "hostname": "",
+        "port": "8086",
+        "protocol": "http",
+        "database": "msh",
+        "name": "Local InfluxDB",
+        "usetls": false,
+        "tls": "",
+        "influxdbVersion": "1.x",
+        "url": "http://localhost:8086",
+        "rejectUnauthorized": true
+    },
+    {
+        "id": "07b2da65ae42f546",
+        "type": "mqtt-broker",
+        "name": "Mosquito",
+        "broker": "",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "node-red",
+        "birthQos": "0",
+        "birthRetain": "true",
+        "birthPayload": "node-red connected",
+        "birthMsg": {},
+        "closeTopic": "node-red",
+        "closeQos": "0",
+        "closeRetain": "true",
+        "closePayload": "node-red disconnected",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    }
+]
