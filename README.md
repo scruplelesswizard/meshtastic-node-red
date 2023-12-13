@@ -5,11 +5,18 @@ Node-RED Configuration for Meshtastic Packets
 - Ingestion from MQTT
 - Protobufs decoding
 - Message deduplication by ID
-- Translating integer To/From node ids to hex
-- Annotating packets with known NodeInfo
+- Annotate integer-based node ids to hex
+- Annotate packets with known NodeInfo
 - Split for all current port numbers
-- Writing Packet, Device, Environment and Position measurements to InfluxDB
+- Writing Mesh, Packet, Device, Environment and Position measurements to InfluxDB
 - Debug nodes for all outputs
+
+### Included Subflows
+- Ingest from MQTT
+- Measurement: Mesh
+- Measurement: Packet
+- Measurement: Device Telemetry
+- Measurement: Environment Telemetry
 
 ## Dependencies
 The following Node-RED modules need to be added to the palette before importing the workflow:
@@ -19,5 +26,3 @@ The following Node-RED modules need to be added to the palette before importing 
 ## Flow Preview
 ![meshtastic-flow](./meshtastic-flow.png)
 
-## Known Limitations
-- NeighbourInfo payloads are not correctly decoded
