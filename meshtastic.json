@@ -16,8 +16,8 @@
         "in": [],
         "out": [
             {
-                "x": 1430,
-                "y": 100,
+                "x": 1370,
+                "y": 40,
                 "wires": [
                     {
                         "id": "13c14b6192865d27",
@@ -42,8 +42,8 @@
         "category": "output",
         "in": [
             {
-                "x": 120,
-                "y": 200,
+                "x": 40,
+                "y": 40,
                 "wires": [
                     {
                         "id": "96e553854838f2f4"
@@ -51,12 +51,26 @@
                 ]
             }
         ],
-        "out": [],
+        "out": [
+            {
+                "x": 500,
+                "y": 80,
+                "wires": [
+                    {
+                        "id": "96e553854838f2f4",
+                        "port": 0
+                    }
+                ]
+            }
+        ],
         "env": [],
         "meta": {},
         "color": "#C0DEED",
         "inputLabels": [
             "Packet"
+        ],
+        "outputLabels": [
+            "Mesh Measurement"
         ],
         "icon": "node-red-contrib-influxdb/influxdb.png"
     },
@@ -68,8 +82,8 @@
         "category": "output",
         "in": [
             {
-                "x": 120,
-                "y": 140,
+                "x": 40,
+                "y": 40,
                 "wires": [
                     {
                         "id": "ea40b1047dcb281e"
@@ -77,12 +91,26 @@
                 ]
             }
         ],
-        "out": [],
+        "out": [
+            {
+                "x": 500,
+                "y": 80,
+                "wires": [
+                    {
+                        "id": "ea40b1047dcb281e",
+                        "port": 0
+                    }
+                ]
+            }
+        ],
         "env": [],
         "meta": {},
         "color": "#C0DEED",
         "inputLabels": [
             "Packet"
+        ],
+        "outputLabels": [
+            "Packet Measurement"
         ],
         "icon": "node-red-contrib-influxdb/influxdb.png"
     },
@@ -94,8 +122,8 @@
         "category": "output",
         "in": [
             {
-                "x": 160,
-                "y": 180,
+                "x": 40,
+                "y": 40,
                 "wires": [
                     {
                         "id": "af1ead55008aa3a1"
@@ -103,12 +131,26 @@
                 ]
             }
         ],
-        "out": [],
+        "out": [
+            {
+                "x": 500,
+                "y": 80,
+                "wires": [
+                    {
+                        "id": "af1ead55008aa3a1",
+                        "port": 0
+                    }
+                ]
+            }
+        ],
         "env": [],
         "meta": {},
         "color": "#C0DEED",
         "inputLabels": [
             "Position"
+        ],
+        "outputLabels": [
+            "Position Measurement"
         ],
         "icon": "node-red-contrib-influxdb/influxdb.png"
     },
@@ -120,8 +162,8 @@
         "category": "output",
         "in": [
             {
-                "x": 100,
-                "y": 120,
+                "x": 40,
+                "y": 40,
                 "wires": [
                     {
                         "id": "33c5dc88fcd1bf4b"
@@ -129,12 +171,26 @@
                 ]
             }
         ],
-        "out": [],
+        "out": [
+            {
+                "x": 500,
+                "y": 80,
+                "wires": [
+                    {
+                        "id": "33c5dc88fcd1bf4b",
+                        "port": 0
+                    }
+                ]
+            }
+        ],
         "env": [],
         "meta": {},
         "color": "#C0DEED",
         "inputLabels": [
             "Device Telemetry"
+        ],
+        "outputLabels": [
+            "Device Measurement"
         ],
         "icon": "node-red-contrib-influxdb/influxdb.png"
     },
@@ -146,8 +202,8 @@
         "category": "output",
         "in": [
             {
-                "x": 60,
-                "y": 120,
+                "x": 40,
+                "y": 40,
                 "wires": [
                     {
                         "id": "8569754e02703706"
@@ -155,12 +211,66 @@
                 ]
             }
         ],
-        "out": [],
+        "out": [
+            {
+                "x": 560,
+                "y": 80,
+                "wires": [
+                    {
+                        "id": "8569754e02703706",
+                        "port": 0
+                    }
+                ]
+            }
+        ],
         "env": [],
         "meta": {},
         "color": "#C0DEED",
         "inputLabels": [
             "Environment Telemetry"
+        ],
+        "outputLabels": [
+            "Environment Measurement"
+        ],
+        "icon": "node-red-contrib-influxdb/influxdb.png"
+    },
+    {
+        "id": "19c3e86bc0f7e698",
+        "type": "subflow",
+        "name": "Measurement: Neighbors",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 40,
+                "y": 40,
+                "wires": [
+                    {
+                        "id": "d2fee47f93ca47de"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 870,
+                "y": 80,
+                "wires": [
+                    {
+                        "id": "0c33d10fce15b97e",
+                        "port": 0
+                    }
+                ]
+            }
+        ],
+        "env": [],
+        "meta": {},
+        "color": "#C0DEED",
+        "inputLabels": [
+            "Neighbor Info"
+        ],
+        "outputLabels": [
+            "Neighbor Measurement"
         ],
         "icon": "node-red-contrib-influxdb/influxdb.png"
     },
@@ -208,23 +318,6 @@
         "sessionExpiry": ""
     },
     {
-        "id": "63da12e4baeff017",
-        "type": "debug",
-        "z": "a832ad4ec196570a",
-        "name": "Node Names and Hardware Injected",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1490,
-        "y": 40,
-        "wires": []
-    },
-    {
         "id": "4c809ff0174c8ff0",
         "type": "function",
         "z": "a832ad4ec196570a",
@@ -235,48 +328,13 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 840,
-        "y": 100,
+        "x": 780,
+        "y": 40,
         "wires": [
             [
-                "13c14b6192865d27",
-                "63fd66d3272ed10b"
+                "13c14b6192865d27"
             ]
         ]
-    },
-    {
-        "id": "7e3ebbab282b1482",
-        "type": "debug",
-        "z": "a832ad4ec196570a",
-        "name": "Original Messages",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 790,
-        "y": 60,
-        "wires": []
-    },
-    {
-        "id": "08806f9cfe03f282",
-        "type": "debug",
-        "z": "a832ad4ec196570a",
-        "name": "Duplicate Messages",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 800,
-        "y": 140,
-        "wires": []
     },
     {
         "id": "938a1c3c0bdbd155",
@@ -292,46 +350,12 @@
         "rh": 0,
         "inputs": 0,
         "x": 100,
-        "y": 100,
+        "y": 40,
         "wires": [
             [
                 "1ed79fa8cae54ee4"
             ]
         ]
-    },
-    {
-        "id": "e35eb249e35ecfb3",
-        "type": "debug",
-        "z": "a832ad4ec196570a",
-        "name": "Decoded Message",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 490,
-        "y": 60,
-        "wires": []
-    },
-    {
-        "id": "63fd66d3272ed10b",
-        "type": "debug",
-        "z": "a832ad4ec196570a",
-        "name": "Nodes Identified by Hex",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1130,
-        "y": 60,
-        "wires": []
     },
     {
         "id": "13c14b6192865d27",
@@ -344,12 +368,10 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1160,
-        "y": 100,
+        "x": 1100,
+        "y": 40,
         "wires": [
-            [
-                "63da12e4baeff017"
-            ]
+            []
         ]
     },
     {
@@ -363,16 +385,13 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 510,
-        "y": 100,
+        "x": 490,
+        "y": 40,
         "wires": [
             [
-                "4c809ff0174c8ff0",
-                "7e3ebbab282b1482"
+                "4c809ff0174c8ff0"
             ],
-            [
-                "08806f9cfe03f282"
-            ]
+            []
         ],
         "outputLabels": [
             "Original",
@@ -385,11 +404,10 @@
         "type": "decode",
         "z": "a832ad4ec196570a",
         "name": "Decode",
-        "x": 300,
-        "y": 100,
+        "x": 280,
+        "y": 40,
         "wires": [
             [
-                "e35eb249e35ecfb3",
                 "855fd449b14d6e09"
             ]
         ]
@@ -405,12 +423,11 @@
         "syntax": "mustache",
         "template": "[{\n    \"id\": \"{{payload.packet.from}}{{payload.packet.to}}\",\n    \"source\": \"{{payload.packet.fromLongName}}\",\n    \"target\": \"{{payload.packet.toLongName}}\",\n    \"rxSnr\": {{payload.packet.rxSnr}},\n    \"rxRssi\": {{payload.packet.rxRssi}}\n},\n{\n    \"from\": \"{{payload.packet.fromHex}}\",\n    \"fromShortName\": \"{{payload.packet.fromShortName}}\",\n    \"fromLongName\": \"{{payload.packet.fromLongName}}\",\n    \"fromHardware\": \"{{payload.packet.fromHardware}}\",\n    \"to\": \"{{payload.packet.toHex}}\",\n    \"toShortName\": \"{{payload.packet.toShortName}}\",\n    \"toLongName\": \"{{payload.packet.toLongName}}\",\n    \"toHardware\": \"{{payload.packet.toHardware}}\",\n    \"channelId\": \"{{payload.channelId}}\",\n    \"gatewayId\": \"{{payload.gatewayId}}\"\n}]",
         "output": "json",
-        "x": 330,
-        "y": 200,
+        "x": 230,
+        "y": 40,
         "wires": [
             [
-                "70d77a69a1aedb60",
-                "565bf6107aace3ce"
+                "70d77a69a1aedb60"
             ]
         ],
         "icon": "font-awesome/fa-power-off"
@@ -429,25 +446,8 @@
         "retentionPolicyV18Flux": "",
         "org": "organisation",
         "bucket": "bucket",
-        "x": 710,
-        "y": 180,
-        "wires": []
-    },
-    {
-        "id": "565bf6107aace3ce",
-        "type": "debug",
-        "z": "8dd264d8b2b469c1",
-        "name": "Mesh Measurement",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 700,
-        "y": 220,
+        "x": 510,
+        "y": 40,
         "wires": []
     },
     {
@@ -461,12 +461,11 @@
         "syntax": "mustache",
         "template": "[{\n    \"rxTime\": {{payload.packet.rxTime}},\n    \"rxSnr\": {{payload.packet.rxSnr}},\n    \"hopLimit\": {{payload.packet.hopLimit}},\n    \"priority\": {{payload.packet.priority}},\n    \"rxRssi\": {{payload.packet.rxRssi}},\n    \"delayed\": {{payload.packet.delayed}}\n},\n{\n    \"from\": \"{{payload.packet.fromHex}}\",\n    \"fromShortName\": \"{{payload.packet.fromShortName}}\",\n    \"fromLongName\": \"{{payload.packet.fromLongName}}\",\n    \"fromHardware\": \"{{payload.packet.fromHardware}}\",\n    \"to\": \"{{payload.packet.toHex}}\",\n    \"toShortName\": \"{{payload.packet.toShortName}}\",\n    \"toLongName\": \"{{payload.packet.toLongName}}\",\n    \"toHardware\": \"{{payload.packet.toHardware}}\",\n    \"channelId\": \"{{payload.channelId}}\",\n    \"gatewayId\": \"{{payload.gatewayId}}\"\n}]",
         "output": "json",
-        "x": 330,
-        "y": 140,
+        "x": 230,
+        "y": 40,
         "wires": [
             [
-                "54c9586ca95b7ed1",
-                "eabe626826678b37"
+                "54c9586ca95b7ed1"
             ]
         ],
         "icon": "font-awesome/fa-power-off"
@@ -485,25 +484,8 @@
         "retentionPolicyV18Flux": "",
         "org": "organisation",
         "bucket": "bucket",
-        "x": 720,
-        "y": 120,
-        "wires": []
-    },
-    {
-        "id": "eabe626826678b37",
-        "type": "debug",
-        "z": "3e0ee1b8ba4768f0",
-        "name": "Packet Measurement",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 700,
-        "y": 160,
+        "x": 520,
+        "y": 40,
         "wires": []
     },
     {
@@ -511,18 +493,17 @@
         "type": "function",
         "z": "f9e40322037c429a",
         "name": "Generate Position Measurement",
-        "func": "var payload = msg.payload.packet.decoded.payload\n\nvar out = [{\n    \"latitude\": (payload.latitudeI * 1e-7),\n    \"longitude\": (payload.longitudeI * 1e-7),\n    \"altitude\": payload.altitude,\n    \"satsInView\": payload.satsInView,\n    \"groundSpeed\": payload.groundSpeed,\n    \"groundTrack\": payload.groundTrack,\n    \"pDOP\": payload.pDOP,\n},\n{\n    \"from\": msg.payload.packet.fromHex,\n    \"fromShortName\": msg.payload.packet.fromShortName,\n    \"fromLongName\": msg.payload.packet.fromLongName,\n    \"fromHardware\": msg.payload.packet.fromHardware,\n    \"to\": msg.payload.packet.toHex,\n    \"toShortName\": msg.payload.packet.toShortName,\n    \"toLongName\": msg.payload.packet.toLongName,\n    \"toHardware\": msg.payload.packet.toHardware,\n    \"channelId\": msg.payload.channelId,\n    \"gatewayId\": msg.payload.gatewayId\n}]\n\nmsg.payload = out\n\nreturn msg;",
+        "func": "var payload = msg.payload.packet.decoded.payload\n\nvar out = [{\n    \"latitude\": (payload.latitudeI * 1e-7),\n    \"longitude\": (payload.longitudeI * 1e-7),\n    \"altitude\": payload.altitude,\n    \"satsInView\": payload.satsInView,\n    \"groundSpeed\": payload.groundSpeed,\n    \"groundTrack\": payload.groundTrack,\n    \"pDOP\": payload.PDOP,\n},\n{\n    \"from\": msg.payload.packet.fromHex,\n    \"fromShortName\": msg.payload.packet.fromShortName,\n    \"fromLongName\": msg.payload.packet.fromLongName,\n    \"fromHardware\": msg.payload.packet.fromHardware,\n    \"to\": msg.payload.packet.toHex,\n    \"toShortName\": msg.payload.packet.toShortName,\n    \"toLongName\": msg.payload.packet.toLongName,\n    \"toHardware\": msg.payload.packet.toHardware,\n    \"channelId\": msg.payload.channelId,\n    \"gatewayId\": msg.payload.gatewayId\n}]\n\nmsg.payload = out\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 370,
-        "y": 180,
+        "x": 230,
+        "y": 40,
         "wires": [
             [
-                "99f9cca4b6a6bf62",
-                "8359de37e139c84e"
+                "99f9cca4b6a6bf62"
             ]
         ],
         "icon": "font-awesome/fa-location-arrow"
@@ -541,42 +522,8 @@
         "retentionPolicyV18Flux": "",
         "org": "organisation",
         "bucket": "bucket",
-        "x": 680,
-        "y": 180,
-        "wires": []
-    },
-    {
-        "id": "8359de37e139c84e",
-        "type": "debug",
-        "z": "f9e40322037c429a",
-        "name": "Position Measurement",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 660,
-        "y": 140,
-        "wires": []
-    },
-    {
-        "id": "61aa5d3ba2f9797f",
-        "type": "debug",
-        "z": "496cbfc0434e783d",
-        "name": "Device Measurement",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 640,
-        "y": 80,
+        "x": 520,
+        "y": 40,
         "wires": []
     },
     {
@@ -590,11 +537,10 @@
         "syntax": "mustache",
         "template": "[{\n    \"air_util_tx\": {{payload.packet.decoded.payload.deviceMetrics.airUtilTx}},\n    \"battery_level\": {{payload.packet.decoded.payload.deviceMetrics.batteryLevel}},\n    \"channel_utilization\": {{payload.packet.decoded.payload.deviceMetrics.channelUtilization}},\n    \"voltage\": {{payload.packet.decoded.payload.deviceMetrics.voltage}}\n},\n{\n    \"from\": \"{{payload.packet.fromHex}}\",\n    \"fromShortName\": \"{{payload.packet.fromShortName}}\",\n    \"fromLongName\": \"{{payload.packet.fromLongName}}\",\n    \"fromHardware\": \"{{payload.packet.fromHardware}}\",\n    \"to\": \"{{payload.packet.toHex}}\",\n    \"toShortName\": \"{{payload.packet.toShortName}}\",\n    \"toLongName\": \"{{payload.packet.toLongName}}\",\n    \"toHardware\": \"{{payload.packet.toHardware}}\",\n    \"channelId\": \"{{payload.channelId}}\",\n    \"gatewayId\": \"{{payload.gatewayId}}\"\n}]",
         "output": "json",
-        "x": 310,
-        "y": 120,
+        "x": 230,
+        "y": 40,
         "wires": [
             [
-                "61aa5d3ba2f9797f",
                 "c7fd5f39b31851f5"
             ]
         ],
@@ -614,8 +560,8 @@
         "retentionPolicyV18Flux": "",
         "org": "organisation",
         "bucket": "bucket",
-        "x": 660,
-        "y": 120,
+        "x": 520,
+        "y": 40,
         "wires": []
     },
     {
@@ -629,32 +575,14 @@
         "syntax": "mustache",
         "template": "[{\n    \"barometric_pressure\": {{payload.packet.decoded.payload.environmentMetrics.barometricPressure}},\n    \"gas_resistance\": {{payload.packet.decoded.payload.environmentMetrics.gasResistance}},\n    \"relative_humidity\": {{payload.packet.decoded.payload.environmentMetrics.relativeHumidity}},\n    \"temperature\": {{payload.packet.decoded.payload.environmentMetrics.temperature}}\n},\n{\n    \"from\": \"{{payload.packet.fromHex}}\",\n    \"fromShortName\": \"{{payload.packet.fromShortName}}\",\n    \"fromLongName\": \"{{payload.packet.fromLongName}}\",\n    \"fromHardware\": \"{{payload.packet.fromHardware}}\",\n    \"to\": \"{{payload.packet.toHex}}\",\n    \"toShortName\": \"{{payload.packet.toShortName}}\",\n    \"toLongName\": \"{{payload.packet.toLongName}}\",\n    \"toHardware\": \"{{payload.packet.toHardware}}\",\n    \"channelId\": \"{{payload.channelId}}\",\n    \"gatewayId\": \"{{payload.gatewayId}}\"\n}]",
         "output": "json",
-        "x": 290,
-        "y": 120,
+        "x": 250,
+        "y": 40,
         "wires": [
             [
-                "d714c7fefad20f11",
                 "a3c383330d74e1bb"
             ]
         ],
         "icon": "font-awesome/fa-thermometer-2"
-    },
-    {
-        "id": "d714c7fefad20f11",
-        "type": "debug",
-        "z": "0ca01258e3f5252a",
-        "name": "Environment Measurement",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 620,
-        "y": 80,
-        "wires": []
     },
     {
         "id": "a3c383330d74e1bb",
@@ -670,8 +598,64 @@
         "retentionPolicyV18Flux": "",
         "org": "organisation",
         "bucket": "bucket",
-        "x": 640,
-        "y": 120,
+        "x": 580,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "d2fee47f93ca47de",
+        "type": "function",
+        "z": "19c3e86bc0f7e698",
+        "name": "Translate NeighborInfo Node Identifiers to Hex",
+        "func": "var nodeLongNames = global.get('nodeLongNames')\n\nif (nodeLongNames === undefined) nodeLongNames = {}\n\nlet payload = msg.payload.packet.decoded.payload;\n\npayload.nodeIdHex = '!' + payload.nodeId.toString(16).padStart(8,0);\n\nconst nodeLongNameAppend = \" (\" + payload.nodeIdHex + \")\"\n\nif (nodeLongNames.hasOwnProperty(payload.nodeIdHex)) {\n    payload.nodeLongName = nodeLongNames[payload.nodeIdHex] + nodeLongNameAppend\n} else {\n    payload.nodeLongName = \"unknown\" + nodeLongNameAppend\n}\n\npayload.lastSentByIdHex = '!' + payload.lastSentById.toString(16).padStart(8, 0);\n\npayload.neighbors.forEach(function(neighbor) {\n    neighbor.nodeIdHex = '!' + neighbor.nodeId.toString(16).padStart(8, 0)\n\n    const neighborLongNameAppend = \" (\" + neighbor.nodeIdHex + \")\"\n\n    if (nodeLongNames.hasOwnProperty(neighbor.nodeIdHex)) {\n        neighbor.nodeLongName = nodeLongNames[neighbor.nodeIdHex] + neighborLongNameAppend\n    } else {\n        neighbor.nodeLongName = \"unknown\" + neighborLongNameAppend\n    }\n    \n});\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 280,
+        "y": 40,
+        "wires": [
+            [
+                "0c33d10fce15b97e"
+            ]
+        ]
+    },
+    {
+        "id": "0c33d10fce15b97e",
+        "type": "function",
+        "z": "19c3e86bc0f7e698",
+        "name": "Measurement; Neighbors",
+        "func": "let msgs = [];\nlet nodes = [];\nlet seenNodes = [];\n\nconst packet = msg.payload.packet;\n\nconst thisNode = packet.decoded.payload.nodeLongName;\nconst thisNodeId = packet.decoded.payload.nodeId;\nconst neighbors = packet.decoded.payload.neighbors;\n\nconsole.log(\"building neighbors\")\n\nneighbors.forEach(function (neighbor) {\n    console.log(\"building neighbor\" + neighbor.nodeIdHex);\n    if (!seenNodes.includes(neighbor.nodeId))\n        nodes.push({\n            nodeId: neighbor.nodeId,\n            nodeIdHex: neighbor.nodeIdHex,\n            nodeLongName: neighbor.nodeLongName,\n            snr: neighbor.snr,\n            lastRxTime: neighbor.lastRxTime\n        });\n    seenNodes.push(neighbor.nodeId)\n    console.log(\"built neighbor\" + neighbor.nodeIdHex);\n});\n\nconsole.log(\"building messages\")\n\nnodes.forEach(function (neighbor) {\n    console.log(\"building message for node \" + neighbor.nodeIdHex);\n    msgs.push(\n        {\n            payload: [\n                {\n                    \"id\": thisNodeId + neighbor.nodeId,\n                    \"source\": thisNode,\n                    \"target\": neighbor.nodeLongName,\n                    \"snr\": neighbor.snr,\n                    \"lastRxTime\": neighbor.lastRxTime\n                },\n                {\n                    \"from\": packet.fromHex,\n                    \"fromShortName\": packet.fromShortName,\n                    \"fromLongName\": packet.fromLongName,\n                    \"fromHardware\": packet.fromHardware,\n                    \"to\": packet.toHex,\n                    \"toShortName\": packet.toShortName,\n                    \"toLongName\": packet.toLongName,\n                    \"toHardware\": packet.toHardware,\n                    \"channelId\": msg.payload.channelId,\n                    \"gatewayId\": msg.payload.gatewayId\n                }\n            ]\n        }\n    );\n    console.log(\"built message for node \" + neighbor.nodeIdHex);\n});\n\nreturn msgs;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 610,
+        "y": 40,
+        "wires": [
+            [
+                "e9461a9c0ed14df4"
+            ]
+        ]
+    },
+    {
+        "id": "e9461a9c0ed14df4",
+        "type": "influxdb out",
+        "z": "19c3e86bc0f7e698",
+        "influxdb": "d96c8f45d69c34f7",
+        "name": "Write Neighbor Measurement",
+        "measurement": "Neighbor",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 880,
+        "y": 40,
         "wires": []
     },
     {
@@ -804,8 +788,8 @@
         "checkall": "false",
         "repair": false,
         "outputs": 24,
-        "x": 550,
-        "y": 580,
+        "x": 350,
+        "y": 480,
         "wires": [
             [
                 "0cbf9e15ee49dd3b"
@@ -868,7 +852,7 @@
                 "05dd3202f55db6c6"
             ],
             [
-                "d2fee47f93ca47de"
+                "f1c034af568fc31b"
             ],
             [
                 "f66a3825a2bc89b5"
@@ -921,8 +905,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 910,
-        "y": 180,
+        "x": 710,
+        "y": 80,
         "wires": []
     },
     {
@@ -938,8 +922,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 940,
-        "y": 140,
+        "x": 740,
+        "y": 40,
         "wires": []
     },
     {
@@ -955,8 +939,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1240,
-        "y": 280,
+        "x": 1040,
+        "y": 180,
         "wires": []
     },
     {
@@ -984,8 +968,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 3,
-        "x": 940,
-        "y": 800,
+        "x": 740,
+        "y": 700,
         "wires": [
             [
                 "b580aaf34162d927"
@@ -1017,8 +1001,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1270,
-        "y": 840,
+        "x": 1070,
+        "y": 740,
         "wires": []
     },
     {
@@ -1028,7 +1012,7 @@
         "name": "",
         "scope": null,
         "uncaught": false,
-        "x": 100,
+        "x": 80,
         "y": 100,
         "wires": [
             [
@@ -1049,7 +1033,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 250,
+        "x": 230,
         "y": 100,
         "wires": []
     },
@@ -1066,8 +1050,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 930,
-        "y": 940,
+        "x": 730,
+        "y": 840,
         "wires": []
     },
     {
@@ -1083,8 +1067,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 920,
-        "y": 340,
+        "x": 720,
+        "y": 240,
         "wires": []
     },
     {
@@ -1100,8 +1084,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 910,
-        "y": 380,
+        "x": 710,
+        "y": 280,
         "wires": []
     },
     {
@@ -1117,8 +1101,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 920,
-        "y": 420,
+        "x": 720,
+        "y": 320,
         "wires": []
     },
     {
@@ -1134,8 +1118,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 920,
-        "y": 460,
+        "x": 720,
+        "y": 360,
         "wires": []
     },
     {
@@ -1151,8 +1135,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 910,
-        "y": 500,
+        "x": 710,
+        "y": 400,
         "wires": []
     },
     {
@@ -1168,8 +1152,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 950,
-        "y": 540,
+        "x": 750,
+        "y": 440,
         "wires": []
     },
     {
@@ -1185,8 +1169,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 910,
-        "y": 580,
+        "x": 710,
+        "y": 480,
         "wires": []
     },
     {
@@ -1202,8 +1186,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 920,
-        "y": 620,
+        "x": 720,
+        "y": 520,
         "wires": []
     },
     {
@@ -1219,8 +1203,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 910,
-        "y": 660,
+        "x": 710,
+        "y": 560,
         "wires": []
     },
     {
@@ -1236,8 +1220,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 940,
-        "y": 700,
+        "x": 740,
+        "y": 600,
         "wires": []
     },
     {
@@ -1253,8 +1237,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 930,
-        "y": 740,
+        "x": 730,
+        "y": 640,
         "wires": []
     },
     {
@@ -1270,8 +1254,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 950,
-        "y": 220,
+        "x": 750,
+        "y": 120,
         "wires": []
     },
     {
@@ -1287,8 +1271,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 960,
-        "y": 860,
+        "x": 760,
+        "y": 760,
         "wires": []
     },
     {
@@ -1304,8 +1288,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 920,
-        "y": 900,
+        "x": 720,
+        "y": 800,
         "wires": []
     },
     {
@@ -1321,8 +1305,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 920,
-        "y": 1020,
+        "x": 720,
+        "y": 920,
         "wires": []
     },
     {
@@ -1338,8 +1322,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 940,
-        "y": 1060,
+        "x": 740,
+        "y": 960,
         "wires": []
     },
     {
@@ -1355,8 +1339,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 940,
-        "y": 1100,
+        "x": 740,
+        "y": 1000,
         "wires": []
     },
     {
@@ -1370,8 +1354,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 990,
-        "y": 300,
+        "x": 790,
+        "y": 200,
         "wires": [
             [
                 "7fa2849d08656963"
@@ -1401,44 +1385,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1290,
-        "y": 320,
-        "wires": []
-    },
-    {
-        "id": "d2fee47f93ca47de",
-        "type": "function",
-        "z": "f86392651850d084",
-        "name": "Translate NeighborInfo Node Identifiers to Hex",
-        "func": "let payload = msg.payload.packet.decoded.payload;\n\npayload.nodeIdHex = '!' + payload.nodeId.toString(16).padStart(8,0);\npayload.lastSentByIdHex = '!' + payload.lastSentById.toString(16).padStart(8, 0);\n\npayload.neighbors.forEach(function(neighbor) {\n    neighbor.nodeIdHex = '!' + neighbor.nodeId.toString(16).padStart(8, 0)\n});\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1040,
-        "y": 980,
-        "wires": [
-            [
-                "4663655785e75cd6"
-            ]
-        ]
-    },
-    {
-        "id": "4663655785e75cd6",
-        "type": "debug",
-        "z": "f86392651850d084",
-        "name": "Neighbor Info",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1340,
-        "y": 980,
+        "x": 1090,
+        "y": 220,
         "wires": []
     },
     {
@@ -1446,8 +1394,8 @@
         "type": "subflow:a832ad4ec196570a",
         "z": "f86392651850d084",
         "name": "",
-        "x": 130,
-        "y": 580,
+        "x": 110,
+        "y": 480,
         "wires": [
             [
                 "a047428628dbff56",
@@ -1461,44 +1409,65 @@
         "type": "subflow:8dd264d8b2b469c1",
         "z": "f86392651850d084",
         "name": "Measurement: Mesh",
-        "x": 560,
-        "y": 320,
-        "wires": []
+        "x": 360,
+        "y": 220,
+        "wires": [
+            []
+        ]
     },
     {
         "id": "51611eebf11d2a12",
         "type": "subflow:3e0ee1b8ba4768f0",
         "z": "f86392651850d084",
         "name": "Measurement: Packet",
-        "x": 560,
-        "y": 360,
-        "wires": []
+        "x": 360,
+        "y": 260,
+        "wires": [
+            []
+        ]
     },
     {
         "id": "773afcf51939b5fa",
         "type": "subflow:f9e40322037c429a",
         "z": "f86392651850d084",
         "name": "Measurement: Position",
-        "x": 960,
-        "y": 260,
-        "wires": []
+        "x": 760,
+        "y": 160,
+        "wires": [
+            []
+        ]
     },
     {
         "id": "b580aaf34162d927",
         "type": "subflow:496cbfc0434e783d",
         "z": "f86392651850d084",
         "name": "Measurement: Device Telemetry",
-        "x": 1310,
-        "y": 760,
-        "wires": []
+        "x": 1110,
+        "y": 660,
+        "wires": [
+            []
+        ]
     },
     {
         "id": "7cc5becf0784992e",
         "type": "subflow:0ca01258e3f5252a",
         "z": "f86392651850d084",
         "name": "Measurement: Environment Telemetry",
-        "x": 1330,
-        "y": 800,
-        "wires": []
+        "x": 1130,
+        "y": 700,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f1c034af568fc31b",
+        "type": "subflow:19c3e86bc0f7e698",
+        "z": "f86392651850d084",
+        "name": "",
+        "x": 770,
+        "y": 880,
+        "wires": [
+            []
+        ]
     }
 ]
