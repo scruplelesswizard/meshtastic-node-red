@@ -11,7 +11,7 @@ Grafana.
 
 - Ingestion from MQTT
 - Protobuf decoding
-- Message deduplication by packet ID
+- Message deduplication by packet ID (5 minute window, so one packet heard by several gateways is stored once)
 - Annotate integer-based node IDs as hex
 - Annotate packets with known NodeInfo (long name, short name, hardware model)
 - Split by every current port number
@@ -53,14 +53,17 @@ Grafana.
 
 ## Measurements written
 
-| Measurement | Source |
+| Measurement | Fields |
 |-------------|--------|
-| `Mesh` | Mesh-level counters |
-| `Packet` | Every decoded packet |
-| `Position` | Position packets |
-| `Device` | Device telemetry (battery, voltage, air utilization) |
-| `Environment` | Environment telemetry (temperature, humidity, pressure) |
-| `Neighbor` | NeighborInfo packets |
+| `Mesh` | Links between nodes (source, target) with SNR and RSSI |
+| `Packet` | Receive time, SNR, RSSI, hop limit, priority, delayed |
+| `Position` | Latitude, longitude, altitude, satellites in view, ground speed and track, PDOP |
+| `Device` | Battery level, voltage, channel utilization, TX air utilization |
+| `Environment` | Temperature, relative humidity, barometric pressure, gas resistance |
+| `Neighbor` | Neighbor links from NeighborInfo packets, with SNR |
+
+Every point is tagged with the sender and receiver (hex ID, short name, long name, hardware model), the
+channel and the gateway.
 
 ## Compatibility
 
