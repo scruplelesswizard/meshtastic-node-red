@@ -65,10 +65,15 @@ Grafana.
 Every point is tagged with the sender and receiver (hex ID, short name, long name, hardware model), the
 channel and the gateway.
 
-## Compatibility
+## Status: archived
 
-Last updated for Meshtastic firmware **2.2.15**. Newer firmware has not been tested against this flow, so
-the protobuf definitions in the palette module may need updating. Issues and pull requests welcome.
+This project is archived and read-only. It is kept as a working reference for decoding Meshtastic MQTT
+traffic into InfluxDB with Node-RED.
+
+It was last updated for Meshtastic firmware **2.2.15**. Firmware 2.3.0 and later changed the MQTT
+payloads (see [#11](https://github.com/scruplelesswizard/meshtastic-node-red/issues/11)), so the
+"Ingest from MQTT" subflow needs modification before it will work with current firmware. You are welcome
+to fork it.
 
 ## License
 
